@@ -1,82 +1,73 @@
-//string,number,boolean
-let x:number = 10;
+// Definindo variáveis com tipos específicos
+let x: number = 10;
 x = 49;
-
 console.log(x);
-//inferencia x annotation
 
+// Inferência de tipo e uso de tipos explícitos
 const y = 12;
-const z:number = y;
-const sum:number = (y + z);
+const z: number = y;
+const sum: number = (y + z);
 console.log(sum * sum);
 
-// Basic Types
-let fisrtName:string = "Gabriel";
-let age:number = 25;
-const isAdmin:boolean = true;
+// Declaração de variáveis com tipos básicos
+let firstName: string = "Gabriel";
+let age: number = 25;
+const isAdmin: boolean = true;
+console.log(typeof firstName);
 
-console.log(typeof fisrtName);
-
-//Object
-const myNumbers: number[] = [1,2,3,4,8];
+// Uso de array e métodos de array
+const myNumbers: number[] = [1, 2, 3, 4, 8];
 console.log(myNumbers);
 console.log(myNumbers.length);
-console.log(fisrtName.toLocaleUpperCase().concat(" <==> "));
+console.log(firstName.toLocaleUpperCase().concat(" <==> "));
 myNumbers.push(777);
 console.log(myNumbers);
 console.log("Down:")
 console.log(myNumbers.length);
 
-
-// Tuplas
-let tupla:[number, string, string[], number[]];
-tupla = [1,"2",["5","7"], [88,985]];
+// Uso de tuplas
+let tupla: [number, string, string[], number[]];
+tupla = [1, "2", ["5", "7"], [88, 985]];
 console.log(tupla);
 
-// Object Literals -> {prop: value}
-const user: {name: string, age:number, email:string} = {
+// Uso de objetos literais
+const user: { name: string, age: number, email: string } = {
     name: "Gabriel",
-    age: 23, 
+    age: 23,
     email: "vagavsgavs@hotmail.com"
 };
-
 user.age = 18; //23 antes
 console.log(user);
 
-let id: string | number = 10
+// Uso de tipos de união
+let id: string | number = 10;
 id = 255;
 
-
-//type alias
+// Definição de um tipo de união personalizado
 type myIdTypeOnly = string | number;
-
-const userId:myIdTypeOnly = "250";
+const userId: myIdTypeOnly = "250";
 console.log("Type ALIAS ==>" + userId);
 
-
-//enum
-enum Size{
- P = "Pequeno",
- M = "Medio",
- G = "Grande"
+// Uso de enum
+enum Size {
+    P = "Pequeno",
+    M = "Medio",
+    G = "Grande"
 }
-
 const camisa = {
     name: "Gola V",
     size: Size.M
 }
-
 console.log(camisa);
 
-// literal types
+// Uso de tipos literais
 let teste: "Ok" | null;
-//teste = "Duda";
+// teste = "Duda"; // Erro, pois "Duda" não é um tipo válido
 teste = 'Ok';
 teste = null;
 
-
-//Function
-function addction(a:number ,b:number){
+// Declaração de funções
+function addction(a: number, b: number) {
     return a + b;
 }
 
